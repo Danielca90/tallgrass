@@ -1,0 +1,107 @@
+# TALLGRASS v2 — CREATURE ROSTER (snapshot)
+# Lista cerrada: siempre las mismas 80 especies en todos los mundos. Criaturas originales,
+# inspiradas en los arquetipos clásicos (trío inicial, pájaro común, roedor, bicho, etc.).
+#
+# 18 tipos: Normal Fire Water Grass Electric Ice Fighting Poison Ground Flying Psychic Bug Rock Ghost Dragon Dark Steel Fairy
+#
+# formato:  # | Nombre | Tipo(s) | evoluciona (nivel>número) | cuerpo | partes | colores (cuerpo, panza, acento)
+# cuerpos:  quad biped bird insect round floater golem fish serpent crab
+# Para cambiar un diseño: edita cuerpo / partes / colores y regenera la hoja de criaturas.
+
+# ---- Starters (Professor Alder's lab)
+1  | Sproutle   | Grass          | 16>2 | quad    | leaf_head spots           | 6cc24a f4f0c4 2f8a3a
+2  | Thornox    | Grass          | 34>3 | quad    | leaf_back horns spots     | 4fae46 f0eabc d9506a
+3  | Grovemaw   | Grass/Ground   | -    | quad    | tree_back horns claws     | 3f8f3c d8c89a 8a5a30
+4  | Cindrel    | Fire           | 16>5 | biped   | flame_tail                | f07830 f8e2a8 ffd040
+5  | Blazert    | Fire           | 34>6 | biped   | flame_tail horns claws    | e45a28 f6d8a0 ffcf3a
+6  | Pyrothane  | Fire/Dragon    | -    | biped   | flame_tail horns wings_bat claws | d84424 f2cf94 3a6ad0
+7  | Pudlet     | Water          | 16>8 | quad    | shell tail_curl           | 58aee8 f4e2b0 a8784a
+8  | Tidalon    | Water          | 34>9 | quad    | shell fins tail_curl      | 3f8ed8 f0dcaa 8a6440
+9  | Krakashell | Water/Steel    | -    | quad    | shell_spikes fins         | 2f6fc0 e8d6a4 9aa4b4
+
+# ---- Greenhollow Meadow (1-8)
+10 | Pipsqueak  | Normal         | 12>11 | quad   | ears_big whiskers tail_long | b88a5e f4e4c8 f08a9a
+11 | Squeakmaw  | Normal         | -    | quad    | ears_big whiskers fangs tail_long | 9a6a44 f0dcc0 f0d040
+12 | Featherlet | Normal/Flying  | 14>13 | bird   | crest                     | a87a50 f4e6c8 e8a040
+13 | Gustail    | Normal/Flying  | 30>14 | bird   | crest tail_feathers       | 96683e f0e0c0 e85040
+14 | Skyrend    | Normal/Flying  | -    | bird    | crest_big tail_feathers   | 8a5a34 eedcb8 f0c040
+15 | Wigglet    | Bug            | 7>16 | insect  | caterpillar antennae spots | 9ad048 f8f0a0 e85050
+16 | Cocoonix   | Bug            | 10>17 | round  | shell                     | b8b860 d8d898 8a8a40
+17 | Flutterine | Bug/Flying     | -    | insect  | wings_insect antennae     | 8a6ad0 f0e8f8 f8d040
+18 | Sparkit    | Electric       | 18>19 | round  | ears_pointy zigzag_tail cheeks | f8d030 fff4c0 e85048
+19 | Voltail    | Electric       | -    | biped   | ears_pointy zigzag_tail cheeks | f0c020 fff0b0 e85048
+
+# ---- Whisperwood (8-15)
+20 | Mossling   | Grass          | 20>21 | biped  | leaf_head                 | 7ab858 e8f0c0 4a8a3a
+21 | Barkbrute  | Grass/Fighting | -    | biped   | bark_armor fists leaf_head | 8a6a44 c8b088 4fa048
+22 | Shroomp    | Grass/Poison   | 22>23 | round  | mushroom_cap spots        | f0e0c8 f8f0e0 d84848
+23 | Fungaroo   | Grass/Poison   | -    | biped   | mushroom_cap spots fists  | e8d4b8 f6ecdc b04898
+24 | Hootle     | Normal/Psychic | 24>25 | bird   | ears_tuft big_eyes        | 8a7a6a e8dcc8 f0c040
+25 | Owlucid    | Psychic/Flying | -    | bird    | ears_tuft big_eyes gem    | 6a5a8a e0d4e8 f05890
+26 | Fangfox    | Dark           | 25>27 | quad   | ears_pointy tail_fluffy mask | 4a4058 d8d0e0 e83a4a
+27 | Shadefang  | Dark           | -    | quad    | ears_pointy mane fangs tail_fluffy | 36304a c8c0d8 e83a4a
+28 | Antlex     | Bug/Steel      | -    | insect  | beetle horn armor_plates  | 4a6a8a b8c4d0 f0c040
+29 | Pixira     | Fairy          | 24>30 | round  | ribbon_wings              | f8b8d8 fff0f8 8ad0f0
+30 | Glimmora   | Fairy          | -    | floater | ribbon_wings crown        | f0a0d0 fff0f8 f8e070
+
+# ---- Saltwind Coast (15-22)
+31 | Snapclaw   | Water          | 26>32 | crab   | claws_big shell           | e86040 f8d8b0 f8f0e0
+32 | Krabbitar  | Water/Rock     | -    | crab    | claws_big rock_spikes     | c84830 f0c8a0 9a948a
+33 | Finnip     | Water          | 20>34 | fish   | fins                      | 5ab8e8 f0f8ff f8a040
+34 | Torrentide | Water/Dragon   | -    | serpent | fins horns                | 2f80c8 d8ecf8 f0c040
+35 | Gullet     | Water/Flying   | 25>36 | bird   | beak_hook                 | f0f0f4 f8f8fc 4a8ad0
+36 | Stormgull  | Water/Flying   | -    | bird    | beak_hook crest tail_feathers | d8dce8 f0f4fc 3a6ab8
+37 | Jellume    | Water/Poison   | 28>38 | floater | tentacles glow           | 8ab8f0 e0f0ff c86ad8
+38 | Mantoxa    | Water/Poison   | -    | floater | tentacles crown glow      | 6a90e0 d8e8ff b04ac8
+39 | Coralune   | Water/Fairy    | -    | round   | coral_horns               | f89ab0 fff0f4 58c8e0
+40 | Shellow    | Water/Ground   | -    | round   | shell spots               | c8a878 f0e0c0 5aa0d0
+
+# ---- Lumen City (22-30)
+41 | Gearbit    | Steel          | 28>42 | golem  | gear single_eye rivets    | a8b0bc dce2ea 50c8f0
+42 | Cogwarden  | Steel          | -    | golem   | gear rivets armor_plates  | 8a94a4 ccd4de f0b030
+43 | Amperon    | Electric/Steel | -    | golem   | antennae glow rivets      | e8c030 f4f0d0 50d8f0
+44 | Alleycat   | Normal         | 26>45 | quad   | ears_pointy tail_long whiskers | 8a8a96 e8e4ec f0c040
+45 | Purrlord   | Normal/Dark    | -    | quad    | ears_pointy mane collar tail_long | 5a5468 e0dce8 f0c040
+46 | Smogle     | Poison         | 28>47 | floater | gas spots                | 9a6ab8 d8c4e8 6ad048
+47 | Smogmaw    | Poison/Fire    | -    | floater | gas fangs                 | 7a4a9a d0b8e0 f07030
+48 | Neonix     | Electric/Psychic | -  | floater | rings glow gem            | 58e0e8 e8fcff f058d0
+49 | Brawlo     | Fighting       | 30>50 | biped  | headband fists            | d89a6a f8e4c8 e84040
+50 | Champeon   | Fighting       | -    | biped   | headband fists belt mane  | c8804a f4dcc0 f0c030
+
+# ---- Sunscar Desert (30-38)
+51 | Sandle     | Ground         | 32>52 | quad   | claws nose                | c89a5a f0dcb0 6a4a30
+52 | Dunemaw    | Ground/Dark    | -    | serpent | spikes fangs              | b08048 e8d0a0 3a3040
+53 | Cactling   | Grass          | 33>54 | biped  | spines flower             | 5aa050 d8e8b0 f05a8a
+54 | Saguarro   | Grass/Fighting | -    | biped   | spines flower fists       | 4a8f48 cce0a8 f0c040
+55 | Scorpix    | Poison/Ground  | 34>56 | insect | scorpion claws stinger    | b85a8a e8c8d8 f0c040
+56 | Scorplague | Poison/Ground  | -    | insect  | scorpion claws stinger armor_plates | 8a3a6a dcb4c8 6ad048
+57 | Solkit     | Fire           | 34>58 | quad   | flame_mane ears_pointy    | f0a040 f8e8c0 e84a28
+58 | Solaris    | Fire/Psychic   | -    | quad    | flame_mane gem tail_fluffy | f0b030 fff0c8 e04090
+59 | Mumbra     | Ghost          | 35>60 | floater | wraps single_eye         | d8ccb0 f0e8d8 5ae0c0
+60 | Pharaghost | Ghost/Ground   | -    | floater | wraps headdress           | c8b890 ece2c8 3a7ad8
+
+# ---- Skyreach Peaks (38-45)
+61 | Pebblit    | Rock           | 38>62 | golem  | round_rock                | 9a948a d0ccc0 6a645a
+62 | Bouldron   | Rock/Ground    | 44>63 | golem  | rock_spikes fists         | 8a8478 c8c0b0 a87a48
+63 | Montagon   | Rock/Steel     | -    | golem   | rock_spikes armor_plates  | 7a7a80 c0c4cc e8a030
+64 | Talonix    | Flying         | 40>65 | bird   | crest beak_hook           | 8a5a3a f0e4d0 f0c040
+65 | Aquilord   | Flying/Fighting | -   | bird    | crest_big beak_hook tail_feathers | 6a4228 f4ece0 f0c040
+66 | Yakmo      | Normal/Ice     | -    | quad    | horns fur                 | 8a7a6a e8e8f0 a8d8f0
+67 | Crystalisk | Rock/Psychic   | -    | serpent | crystal_spikes            | 8a8aa8 d8d8f0 c878f0
+68 | Draklet    | Dragon         | 40>69 | biped  | horns wings_small         | 5a8ad8 f0e0b0 f04a4a
+69 | Wyvaran    | Dragon/Flying  | 50>70 | biped  | horns wings_bat claws     | 3a6ac8 ecd8a8 f04a4a
+70 | Drakonarch | Dragon/Flying  | -    | biped   | horns wings_big claws tail_long | 2a50a8 e8d0a0 f0c040
+
+# ---- Mirefen (45-52)
+71 | Bogling    | Poison/Water   | 46>72 | round  | spots big_eyes            | 6a9a5a d8e8b8 b05ad0
+72 | Murkroak   | Poison/Water   | -    | biped   | spots throat_sac          | 4a7a48 c8dca8 b05ad0
+73 | Wispwick   | Ghost/Fire     | 47>74 | floater | flame_head               | f0ecf4 fffcff 6a70f0
+74 | Lanternox  | Ghost/Fire     | -    | floater | lantern single_eye        | 3a3a5a 8a8ab0 6af0d0
+75 | Crocklurk  | Water/Dark     | -    | quad    | fangs scales tail_long    | 3a6a5a c8d8b8 f0d040
+
+# ---- Frostveil Tundra (52-60)
+76 | Snowpup    | Ice            | 50>77 | quad   | fur crystal_tail ears_pointy | e8f0fa ffffff 7ac8f0
+77 | Frostfang  | Ice/Dark       | -    | quad    | fur fangs crystal_tail ears_pointy | b8c8e0 f0f4ff 3a4a8a
+78 | Glaciore   | Ice/Steel      | -    | golem   | crystal_spikes armor_plates | 9ac8e8 e0f0fc 6a7a90
+79 | Rimewing   | Ice/Flying     | -    | bird    | crest crystal_feathers    | a8d8f0 f0f8ff 5a8ad8
+80 | Auroros    | Ice/Psychic    | -    | quad    | antlers glow fur          | d8e8f8 ffffff 7af0c8

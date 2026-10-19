@@ -1,0 +1,69 @@
+plugins {
+    id 'application'
+}
+
+group = 'tallgrass'
+version = '1.0.0'
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+    options.encoding = 'UTF-8'
+}
+
+// Bake the default texture pack (PNG per texture, like Minecraft's block textures) into the jar.
+def bakedTextures = layout.buildDirectory.dir('generated/texturepack')
+tasks.register('bakeTextures', JavaExec) {
+    group = 'build'
+    description = 'Generates the default texture pack PNGs from code.'
+    dependsOn tasks.compileJava
+    classpath = sourceSets.main.output.classesDirs
+    mainClass = 'tallgrass.TextureBaker'
+    jvmArgs '-Djava.awt.headless=true'
+    args bakedTextures.get().dir('textures').asFile.path
+    inputs.files(sourceSets.main.output.classesDirs)
+    outputs.dir bakedTextures
+}
+tasks.named('processResources') {
+    dependsOn tasks.bakeTextures
+    from(bakedTextures)
+    // hand-made creature art: art/creatures/001_sproutle.png -> /creatures/sproutle.png
+    from('art/creatures') {
+        include '*_*.png'
+        exclude 'preview*'
+        rename '^\\d{3}_(.*)$', '$1'
+        into 'creatures'
+    }
+}
+
+application {
+    mainClass = 'tallgrass.Main'
+    applicationName = 'Tallgrass'
+}
+
+// A plain runnable jar: double-click it, or `java -jar build/libs/Tallgrass.jar`.
+jar {
+    archiveBaseName = 'Tallgrass'
+    archiveVersion = ''
+    manifest { attributes 'Main-Class': 'tallgrass.Main' }
+}
+
+// A real macOS app with its own bundled Java runtime: build/app/Tallgrass.app
+tasks.register('macApp', Exec) {
+    group = 'distribution'
+    description = 'Packages Tallgrass.app with jpackage (bundles its own Java runtime).'
+    dependsOn tasks.jar
+    def outDir = layout.buildDirectory.dir('app').get().asFile
+    def javaHome = System.getProperty('java.home')
+    doFirst { project.delete(outDir) }
+    commandLine "${javaHome}/bin/jpackage",
+            '--type', 'app-image',
+            '--name', 'Tallgrass',
+            '--app-version', '1.0.0',
+            '--input', tasks.jar.destinationDirectory.get().asFile.path,
+            '--main-jar', tasks.jar.archiveFileName.get(),
+            '--main-class', 'tallgrass.Main',
+            '--java-options', '-Dsun.java2d.metal=true',
+            '--add-modules', 'java.base,java.desktop',
+            '--jlink-options', '--strip-debug --no-man-pages --no-header-files',
+            '--dest', outDir.path
+}

@@ -1,0 +1,136 @@
+# TALLGRASS v2 — WORLD SPEC (snapshot)
+# Este archivo ES el diseño del mundo. Si algo no te gusta, se cambia aquí y se regeneran las imágenes;
+# el código del juego se construirá leyendo este archivo.
+#
+# Mundo fijo y abierto: 3x3 casillas de zona, cada zona mide 64 x 48 tiles (unas 4 veces una ruta actual).
+# Todas las zonas vecinas se conectan por todo su borde (sin salidas cerradas). Transición instantánea.
+# Coordenadas de cada zona en tiles: x 0..63, y 0..47.
+#
+# spawn:  nombre | x,y,w,h | niveles | criaturas que deambulan ahí (deben existir en creatures.txt)
+# town:   nombre | estilo | x,y,w,h
+# poi:    punto de interés | x,y | nota
+
+levelCap: 60
+zoneSize: 64x48
+expansion: 60-70 "The Ember Isles" (bloqueada, casilla 2,0)
+
+zone: meadow
+  name: Greenhollow Meadow
+  grid: 1,2
+  levels: 1-8
+  biome: meadow
+  town: Greenhollow | countryside | 24,26,18,14
+  gym: Normal | Leader Marlo | 9
+  poi: Home | 28,30 | you wake up here
+  poi: Professor Alder's Lab | 36,29 | choose your starter
+  poi: Old Windmill | 50,10 | quest chain "The Windmill Pests"
+  poi: Sunny Pond | 10,38 | fishing, gathering quest
+  spawn: Sunny Fields | 4,6,20,14 | 2-4 | Pipsqueak, Featherlet, Wigglet
+  spawn: Windmill Hills | 44,4,18,16 | 4-6 | Pipsqueak, Featherlet, Sparkit
+  spawn: Bramble Thicket | 46,30,16,14 | 6-8 | Wigglet, Sparkit, Cocoonix
+  spawn: Pond Shore | 4,32,16,12 | 3-6 | Finnip, Featherlet, Pipsqueak
+
+zone: forest
+  name: Whisperwood
+  grid: 0,2
+  levels: 8-15
+  biome: forest
+  town: Mossgrove | treetop village | 22,18,16,12
+  gym: Bug | Leader Ivy | 16
+  poi: Ancient Oak | 44,22 | giant tree, chain "Heart of the Wood"
+  poi: Mushroom Ring | 12,36 | Shroomp and Fungaroo
+  poi: Lumber Camp | 52,40 | hunting quests
+  spawn: Mossy Trail | 40,4,22,14 | 8-11 | Mossling, Wigglet, Hootle
+  spawn: Deepwood | 4,4,18,18 | 10-13 | Fangfox, Hootle, Antlex
+  spawn: Mushroom Ring | 4,30,20,16 | 11-14 | Shroomp, Pixira, Cocoonix
+  spawn: Lumber Clearing | 40,32,22,14 | 12-15 | Mossling, Fangfox, Flutterine
+
+zone: coast
+  name: Saltwind Coast
+  grid: 2,2
+  levels: 15-22
+  biome: beach
+  town: Port Saltwind | harbor town | 6,10,20,14
+  gym: Water | Leader Coralie | 23
+  poi: Lighthouse | 56,6 | chain "Lights on the Water"
+  poi: Shipwreck | 46,40 | gather Brine Pearls
+  poi: Tide Pools | 30,30 | Snapclaw and Coralune
+  spawn: Dune Path | 4,28,20,18 | 15-17 | Gullet, Snapclaw, Featherlet
+  spawn: Tide Pools | 26,26,18,14 | 16-19 | Snapclaw, Finnip, Coralune
+  spawn: Wreck Shallows | 42,34,20,12 | 18-21 | Jellume, Finnip, Shellow
+  spawn: Cliff Nests | 40,2,22,14 | 19-22 | Gullet, Stormgull, Jellume
+
+zone: metro
+  name: Lumen City
+  grid: 1,1
+  levels: 22-30
+  biome: city
+  town: Lumen City | metropolis | 16,14,32,22
+  town: Lumen Heights | suburbs | 2,2,14,12
+  gym: Electric | Leader Volta | 31
+  poi: Department Store | 30,20 | big shop
+  poi: Power Plant | 54,8 | chain "Blackout"
+  poi: Old Rail Yard | 52,38 | Gearbit, Cogwarden
+  poi: Central Park | 24,28 | green space inside the city
+  spawn: Central Park | 22,26,12,8 | 22-25 | Alleycat, Pipsqueak, Sparkit
+  spawn: Back Alleys | 2,30,14,16 | 23-27 | Alleycat, Smogle, Brawlo
+  spawn: Power Plant | 50,2,14,16 | 25-29 | Amperon, Neonix, Voltail
+  spawn: Rail Yard | 48,32,16,16 | 26-30 | Gearbit, Smogle, Brawlo
+
+zone: desert
+  name: Sunscar Desert
+  grid: 2,1
+  levels: 30-38
+  biome: desert
+  town: Oasis of Sunscar | desert oasis | 26,18,14,12
+  gym: Ground | Leader Rasha | 39
+  poi: Buried Pyramid | 50,8 | chain "The Sleeping Pharaoh"
+  poi: Bone Canyon | 8,38 | Scorpix, hunting quests
+  spawn: Hot Dunes | 2,2,24,16 | 30-33 | Sandle, Cactling, Solkit
+  spawn: Bone Canyon | 2,30,22,16 | 32-35 | Scorpix, Sandle, Dunemaw
+  spawn: Pyramid Sands | 40,2,22,18 | 34-38 | Mumbra, Solkit, Scorpix
+  spawn: Mirage Flats | 40,30,22,16 | 33-37 | Cactling, Dunemaw, Saguarro
+
+zone: peaks
+  name: Skyreach Peaks
+  grid: 1,0
+  levels: 38-45
+  biome: mountain
+  town: Highridge | mountain village | 22,30,16,12
+  gym: Rock | Leader Brann | 46
+  poi: Crystal Mine | 10,10 | Crystalisk, chain "Deep Crystal"
+  poi: Dragon's Roost | 52,6 | Draklet (rare)
+  poi: Cable Car | 30,24 | shortcut to Lumen City
+  spawn: Switchbacks | 20,6,20,14 | 38-41 | Pebblit, Talonix, Yakmo
+  spawn: Crystal Mine | 2,2,16,18 | 40-43 | Bouldron, Crystalisk, Pebblit
+  spawn: High Pastures | 44,26,18,18 | 39-42 | Yakmo, Talonix, Aquilord
+  spawn: Dragon's Roost | 46,2,16,14 | 42-45 | Draklet, Aquilord, Bouldron
+
+zone: swamp
+  name: Mirefen
+  grid: 0,1
+  levels: 45-52
+  biome: swamp
+  town: Mirefen Stilts | stilt village | 26,20,14,12
+  gym: Poison | Leader Morwen | 53
+  poi: Witch's Hut | 8,8 | chain "Brew of Shadows"
+  poi: Sunken Temple | 48,38 | Wispwick, Lanternox
+  spawn: Bog Edge | 40,2,22,14 | 45-48 | Bogling, Shroomp, Crocklurk
+  spawn: Deep Mire | 2,24,20,22 | 47-50 | Murkroak, Crocklurk, Bogling
+  spawn: Wisp Hollow | 42,30,20,16 | 48-52 | Wispwick, Lanternox, Mumbra
+  spawn: Hanging Moss | 2,2,18,18 | 46-49 | Fungaroo, Shadefang, Bogling
+
+zone: tundra
+  name: Frostveil Tundra
+  grid: 0,0
+  levels: 52-60
+  biome: snow
+  town: Frostveil Station | research outpost | 24,30,16,12
+  gym: Ice | Leader Sigrun | 60
+  poi: Glacier Heart | 10,8 | chain final "The Aurora"
+  poi: Frozen Lake | 46,20 | Rimewing
+  poi: Aurora Ridge | 54,4 | Auroros (level 60, only one)
+  spawn: Snowfields | 2,26,20,20 | 52-55 | Snowpup, Yakmo, Rimewing
+  spawn: Ice Caves | 2,2,20,18 | 54-57 | Glaciore, Frostfang, Crystalisk
+  spawn: Frozen Lake | 36,14,22,16 | 55-58 | Rimewing, Frostfang, Snowpup
+  spawn: Aurora Ridge | 44,2,18,10 | 58-60 | Frostfang, Glaciore, Drakonarch

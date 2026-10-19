@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Pudlet: a small axolotl-like newt wearing a scallop shell on its back, tail curled into a spiral. 3/4 view facing left. -->
+  <defs>
+    <radialGradient id="skin" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#a8dcfa"/>
+      <stop offset="0.55" stop-color="#58aee8"/>
+      <stop offset="1" stop-color="#2f74b4"/>
+    </radialGradient>
+    <radialGradient id="belly" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#fffaea"/>
+      <stop offset="1" stop-color="#e6cf98"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#e2b07a"/>
+      <stop offset="0.5" stop-color="#a8784a"/>
+      <stop offset="1" stop-color="#6e4a2a"/>
+    </linearGradient>
+    <linearGradient id="gill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb8cc"/>
+      <stop offset="1" stop-color="#e06a90"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#16243a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#16243a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="128" cy="224" rx="90" ry="13" fill="url(#shadow)"/>
+  <g stroke="#16223a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- spiral tail -->
+    <path d="M182 186 C214 190, 236 172, 234 150 C232 130, 212 122, 200 132 C190 140, 196 156, 208 154 C216 152, 216 142, 210 140" fill="none" stroke="#2f74b4" stroke-width="16"/>
+    <path d="M182 186 C214 190, 236 172, 234 150 C232 130, 212 122, 200 132 C190 140, 196 156, 208 154 C216 152, 216 142, 210 140" fill="none" stroke="#58aee8" stroke-width="9"/>
+    <!-- back legs -->
+    <ellipse cx="176" cy="206" rx="15" ry="11" fill="#2f74b4"/>
+    <!-- body -->
+    <path d="M70 176 C66 146, 98 126, 138 126 C182 126, 206 150, 200 180 C196 204, 166 214, 128 214 C96 214, 72 202, 70 176 Z" fill="url(#skin)"/>
+    <path d="M82 192 C98 206, 160 210, 190 196 C176 212, 150 216, 126 216 C104 216, 88 206, 82 192 Z" fill="url(#belly)"/>
+    <!-- scallop shell on the back -->
+    <path d="M104 132 C110 92, 150 76, 184 96 C204 108, 210 130, 202 150 L120 154 C110 150, 104 142, 104 132 Z" fill="url(#shell)"/>
+    <!-- front legs -->
+    <ellipse cx="94" cy="206" rx="15" ry="11" fill="#4c9ad8"/>
+    <ellipse cx="132" cy="210" rx="14" ry="10" fill="#3f88c8"/>
+    <!-- gills (behind the head) -->
+    <path d="M70 88 C56 62, 60 44, 72 40 C76 58, 84 72, 86 86 Z" fill="url(#gill)"/>
+    <path d="M58 104 C34 92, 26 76, 34 68 C46 80, 60 90, 66 98 Z" fill="url(#gill)"/>
+    <path d="M110 84 C116 60, 132 50, 142 54 C136 70, 126 82, 118 92 Z" fill="url(#gill)"/>
+    <!-- head -->
+    <path d="M34 128 C30 96, 60 78, 92 80 C126 82, 140 106, 134 132 C128 156, 102 166, 76 164 C50 162, 36 150, 34 128 Z" fill="url(#skin)"/>
+  </g>
+  <!-- shell ridges -->
+  <g fill="none" stroke="#5a3a20" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <path d="M118 148 C120 120, 132 100, 150 90"/>
+    <path d="M140 150 C144 124, 154 106, 170 96"/>
+    <path d="M162 150 C168 130, 178 116, 190 110"/>
+    <path d="M182 150 C188 138, 196 130, 202 128"/>
+  </g>
+  <path d="M120 112 C132 94, 152 86, 172 90" fill="none" stroke="#ffe2b8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <!-- face -->
+  <path d="M40 140 C52 152, 78 156, 98 150" fill="none" stroke="#16223a" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="66" cy="114" rx="14" ry="16" fill="#141a28"/>
+  <ellipse cx="60" cy="106" rx="6" ry="7" fill="#ffffff"/>
+  <circle cx="71" cy="121" r="3" fill="#ffffff" opacity="0.85"/>
+  <ellipse cx="110" cy="112" rx="10" ry="13" fill="#141a28"/>
+  <ellipse cx="106" cy="106" rx="4" ry="5" fill="#ffffff"/>
+  <ellipse cx="88" cy="140" rx="9" ry="5" fill="#ff8aa8" opacity="0.5"/>
+  <!-- belly sheen and spots -->
+  <g fill="#d8f0ff" opacity="0.8"><circle cx="160" cy="176" r="3.5"/><circle cx="180" cy="168" r="2.5"/><circle cx="100" cy="176" r="2.5"/></g>
+  <!-- bubbles -->
+  <g fill="none" stroke="#7ac8f4" stroke-width="2.5"><circle cx="30" cy="54" r="6"/><circle cx="18" cy="34" r="4"/></g>
+</svg>

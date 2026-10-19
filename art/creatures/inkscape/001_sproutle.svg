@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Sproutle: a small moss hedgehog. Leaf quills, a sprout on its head, cream snout. 3/4 view facing left. -->
+  <defs>
+    <radialGradient id="body" cx="0.38" cy="0.32" r="0.75">
+      <stop offset="0" stop-color="#9be27a"/>
+      <stop offset="0.55" stop-color="#6cc24a"/>
+      <stop offset="1" stop-color="#3f8a36"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fd05a"/>
+      <stop offset="1" stop-color="#2f7a32"/>
+    </linearGradient>
+    <linearGradient id="leafDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5aa848"/>
+      <stop offset="1" stop-color="#25632a"/>
+    </linearGradient>
+    <radialGradient id="snout" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#fffbe6"/>
+      <stop offset="1" stop-color="#e2d69c"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1c2a1a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1c2a1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="128" cy="222" rx="86" ry="14" fill="url(#shadow)"/>
+  <g stroke="#1f2a1c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- back legs -->
+    <ellipse cx="170" cy="204" rx="17" ry="13" fill="#3f8a36"/>
+    <!-- leaf quills behind the body -->
+    <path d="M150 112 C170 70, 200 62, 214 70 C206 92, 186 112, 160 124 Z" fill="url(#leafDark)"/>
+    <path d="M176 128 C204 100, 232 104, 242 116 C228 134, 204 144, 182 146 Z" fill="url(#leafDark)"/>
+    <path d="M182 160 C210 150, 236 160, 242 174 C224 184, 200 182, 184 176 Z" fill="url(#leafDark)"/>
+    <!-- body -->
+    <path d="M60 170 C58 122, 104 98, 150 104 C200 110, 226 146, 216 182 C208 208, 170 216, 130 214 C90 212, 62 200, 60 170 Z" fill="url(#body)"/>
+    <!-- front leaf quills on top of the body -->
+    <path d="M118 108 C122 70, 150 54, 168 58 C168 80, 150 102, 130 114 Z" fill="url(#leaf)"/>
+    <path d="M142 116 C160 84, 190 78, 204 86 C198 108, 176 122, 152 128 Z" fill="url(#leaf)"/>
+    <path d="M166 138 C190 116, 218 116, 228 128 C216 146, 194 154, 172 154 Z" fill="url(#leaf)"/>
+    <!-- front legs -->
+    <ellipse cx="96" cy="206" rx="16" ry="13" fill="#5aa848"/>
+    <ellipse cx="134" cy="210" rx="16" ry="12" fill="#4f9a40"/>
+    <!-- snout / face -->
+    <path d="M30 168 C30 140, 56 124, 84 126 C112 128, 124 150, 120 172 C116 194, 92 200, 68 196 C44 192, 30 184, 30 168 Z" fill="url(#snout)"/>
+    <!-- sprout on the head -->
+    <path d="M96 118 C96 100, 100 88, 108 78" fill="none" stroke="#2f6a2a" stroke-width="5"/>
+    <path d="M108 78 C96 62, 74 62, 66 72 C78 86, 98 86, 108 78 Z" fill="url(#leaf)"/>
+    <path d="M108 78 C114 58, 136 52, 146 60 C138 76, 120 82, 108 78 Z" fill="url(#leaf)"/>
+  </g>
+  <!-- leaf midribs -->
+  <g fill="none" stroke="#2a6a2c" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M128 108 C140 88, 152 72, 164 62"/>
+    <path d="M152 122 C170 104, 186 94, 200 88"/>
+    <path d="M176 148 C196 136, 212 130, 224 128"/>
+    <path d="M106 78 C94 72, 82 70, 70 72"/>
+    <path d="M110 76 C120 66, 132 60, 142 60"/>
+  </g>
+  <!-- belly shade and rim light -->
+  <path d="M74 196 C110 210, 170 212, 210 188 C204 206, 168 216, 128 214 C98 212, 82 206, 74 196 Z" fill="#2f6a2a" opacity="0.35"/>
+  <path d="M70 150 C80 126, 110 110, 140 108" fill="none" stroke="#c8f4a8" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <!-- eye -->
+  <ellipse cx="86" cy="152" rx="13" ry="16" fill="#1c1a24"/>
+  <ellipse cx="81" cy="145" rx="5.5" ry="6.5" fill="#ffffff"/>
+  <circle cx="90" cy="159" r="2.6" fill="#ffffff" opacity="0.85"/>
+  <!-- nose, mouth, blush -->
+  <ellipse cx="36" cy="164" rx="7" ry="5.5" fill="#3a2a24"/>
+  <ellipse cx="34" cy="162" rx="2.4" ry="1.6" fill="#ffffff" opacity="0.7"/>
+  <path d="M46 180 C54 186, 62 186, 68 180" fill="none" stroke="#3a2a24" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="66" cy="172" rx="9" ry="5" fill="#ff8aa0" opacity="0.55"/>
+  <!-- moss specks -->
+  <g fill="#c8f4a8" opacity="0.8">
+    <circle cx="150" cy="184" r="3"/><circle cx="176" cy="196" r="2.4"/><circle cx="190" cy="176" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Cindrel: an ember squirrel standing upright, with a huge curled tail made of fire. 3/4 view facing left. -->
+  <defs>
+    <radialGradient id="fur" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffb070"/>
+      <stop offset="0.55" stop-color="#f07830"/>
+      <stop offset="1" stop-color="#b8461c"/>
+    </radialGradient>
+    <radialGradient id="belly" cx="0.4" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#fff6dc"/>
+      <stop offset="1" stop-color="#ecc890"/>
+    </radialGradient>
+    <linearGradient id="flameOut" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0" stop-color="#e2401c"/>
+      <stop offset="0.6" stop-color="#f6801f"/>
+      <stop offset="1" stop-color="#ffb43a"/>
+    </linearGradient>
+    <linearGradient id="flameIn" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0" stop-color="#ffb43a"/>
+      <stop offset="1" stop-color="#fff2a0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffcf50" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffcf50" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2a1a14" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2a1a14" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="128" cy="230" rx="70" ry="12" fill="url(#shadow)"/>
+  <circle cx="176" cy="92" r="84" fill="url(#glow)"/>
+  <g stroke="#2a1812" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- fire tail, curling up behind the body -->
+    <path d="M140 196 C190 200, 236 168, 232 116 C230 70, 196 30, 164 40 C186 34, 214 64, 206 100 C200 130, 176 144, 156 132 C170 150, 160 176, 138 182 Z" fill="url(#flameOut)"/>
+    <path d="M206 100 C222 84, 226 58, 214 34 C232 52, 238 80, 230 104 Z" fill="url(#flameOut)"/>
+    <path d="M182 46 C190 26, 206 14, 220 14 C208 26, 202 40, 200 56 Z" fill="url(#flameOut)"/>
+  </g>
+  <path d="M152 186 C192 188, 222 160, 220 118 C218 86, 198 62, 178 58 C196 74, 206 100, 194 124 C182 146, 164 152, 152 146 C160 162, 158 178, 152 186 Z" fill="url(#flameIn)" opacity="0.95"/>
+  <g stroke="#2a1812" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- feet -->
+    <ellipse cx="104" cy="220" rx="20" ry="10" fill="#c85a24"/>
+    <ellipse cx="146" cy="222" rx="18" ry="9" fill="#a8461c"/>
+    <!-- body -->
+    <path d="M86 140 C84 108, 112 92, 136 96 C162 100, 170 128, 168 160 C166 196, 150 218, 124 218 C96 218, 84 196, 84 170 Z" fill="url(#fur)"/>
+    <path d="M100 150 C100 128, 118 118, 132 122 C148 126, 150 150, 148 172 C146 196, 136 206, 122 206 C106 206, 100 190, 100 170 Z" fill="url(#belly)"/>
+    <!-- ears -->
+    <path d="M70 70 C62 46, 66 24, 76 14 C88 30, 94 50, 92 66 Z" fill="url(#fur)"/>
+    <path d="M124 64 C130 40, 146 24, 158 22 C158 42, 150 60, 140 72 Z" fill="#c85a24"/>
+    <!-- head -->
+    <path d="M52 104 C48 74, 74 54, 104 56 C136 58, 152 82, 148 108 C144 134, 120 146, 94 144 C68 142, 54 128, 52 104 Z" fill="url(#fur)"/>
+    <!-- muzzle -->
+    <path d="M44 112 C42 96, 56 88, 72 90 C88 92, 96 104, 92 118 C88 130, 72 134, 60 130 C50 126, 44 120, 44 112 Z" fill="url(#belly)"/>
+    <!-- arms held up -->
+    <path d="M100 152 C86 150, 78 140, 82 130 C88 124, 98 130, 106 138 Z" fill="#e06a28"/>
+    <path d="M148 150 C162 148, 168 136, 162 128 C156 124, 148 132, 142 140 Z" fill="#c85a24"/>
+  </g>
+  <!-- ember tufts on ear tips -->
+  <path d="M76 14 C70 4, 80 -2, 84 8 C88 2, 94 8, 88 18 Z" fill="#ffd040"/>
+  <path d="M158 22 C160 10, 172 10, 168 22 C176 18, 178 28, 168 30 Z" fill="#ffd040"/>
+  <!-- inner ears -->
+  <path d="M76 58 C72 44, 74 32, 78 26 C84 36, 86 48, 84 58 Z" fill="#ffb090"/>
+  <!-- eyes -->
+  <ellipse cx="84" cy="96" rx="10" ry="13" fill="#1c1418"/>
+  <ellipse cx="80" cy="90" rx="4" ry="5" fill="#ffffff"/>
+  <ellipse cx="122" cy="94" rx="8" ry="11" fill="#1c1418"/>
+  <ellipse cx="119" cy="89" rx="3.2" ry="4" fill="#ffffff"/>
+  <!-- nose, mouth, cheeks -->
+  <ellipse cx="50" cy="106" rx="6" ry="4.5" fill="#3a1e18"/>
+  <path d="M58 120 C64 126, 72 126, 78 120" fill="none" stroke="#3a1e18" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="100" cy="118" rx="8" ry="4.5" fill="#ff6a50" opacity="0.5"/>
+  <!-- rim light on the head from the fire behind -->
+  <path d="M140 84 C148 96, 148 112, 140 126" fill="none" stroke="#ffe08a" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <!-- floating embers -->
+  <g fill="#ffd040"><circle cx="220" cy="150" r="4"/><circle cx="236" cy="80" r="3"/><circle cx="196" cy="20" r="2.5"/></g>
+</svg>
